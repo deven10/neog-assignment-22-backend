@@ -1,3 +1,5 @@
+require("./db");
+
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -6,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("<h1> neoG Assignment 21 </h1>");
+  res.send("<h1> neoG Assignment 22 </h1>");
 });
 
 app.use((err, req, res, next) => {
