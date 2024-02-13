@@ -1,11 +1,17 @@
 require("./db");
 
+const eventRouter = require("./src/Routes/event.routes");
+const volunteerRouter = require("./src/Routes/volunteer.routes");
+
 const express = require("express");
 const cors = require("cors");
 const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+app.use("/api/event", eventRouter);
+app.use("/api/volunteer", volunteerRouter);
 
 app.get("/", (req, res) => {
   res.send("<h1> neoG Assignment 22 </h1>");

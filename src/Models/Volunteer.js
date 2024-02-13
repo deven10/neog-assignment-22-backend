@@ -22,8 +22,12 @@ const VolunteerSchema = new mongoose.Schema(
       type: [String],
       required: true,
     },
+    roles: {
+      type: [String],
+      required: true,
+    },
     events: {
-      type: [Number],
+      type: [String],
       required: true,
     },
   },
