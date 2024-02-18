@@ -18,14 +18,26 @@ const EventSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    volunteersNumber: {
-      type: Number,
-      required: true,
-    },
-    volunteerRoles: {
-      type: [String],
-      required: true,
-    },
+    // volunteersNumber: {
+    //   type: Number,
+    //   required: true,
+    // },
+    // volunteerRoles: {
+    //   type: [String],
+    //   required: true,
+    // },
+    roles: [
+      {
+        role: {
+          type: String,
+          required: true,
+        },
+        volunteersRequired: {
+          type: String,
+          required: true,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );
